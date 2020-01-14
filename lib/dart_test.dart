@@ -1,4 +1,6 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+import 'string_test.dart';
 
 void main() => runApp(new MyApp());
 
@@ -24,7 +26,12 @@ class MyHomePage extends StatefulWidget {
   final String title;
 
   @override
-  _MyHomePageState createState() => _MyHomePageState();
+  _MyHomePageState createState() {
+    StringTest.test();
+    var s = StringTest.construct('ssssss');
+    s.printValue();
+    return _MyHomePageState();
+  }
 }
 
 class _MyHomePageState extends State<MyHomePage> {
@@ -43,11 +50,61 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
+    var gifts = Map();
+    gifts['first'] = 'partridge';
+    gifts['second'] = 'turtledoves';
+    gifts['fifth'] = 'golden rings';
+    print("s----${gifts["first"].runtimeType}");
+    String clapping = '\u{1f44f}';
+    print(clapping);
+    print(clapping.codeUnits);
+    print(clapping.runes.toList());
+    print(clapping.substring(0));
+    Runes input = new Runes(
+        '\u2665-\u{1f605}-\u{1f60e}-\u{1f47b}-\u{1f596}-\u{1f44d}');
+    print(new String.fromCharCodes(input));
+    print(new String.fromCharCodes(input).length);
+    print(new String.fromCharCodes(input).substring(5));
+    const bar = 1000000;       // Unit of pressure (dynes/cm2)
+    const atm = 1.01325 * bar; // Standard atmosphere
+    print(atm);
     return Container(
-      color: Color.fromARGB(255, 255, 0, 0),
+      color: Color.fromARGB(255, 255, 255, 255),
       child: Column(
         children: <Widget>[
-          Text("ssssT"),
+          Text(
+            "[TTTTTTTTTTTTTTT]",
+            style: TextStyle(
+              fontSize: 32,
+              color: Color.fromARGB(255, 0, 255, 0),
+            ),
+          ),
+//          FloatingActionButton(
+//            onPressed: _incrementCounter,
+//            tooltip: 'Increment',
+//            child: Icon(Icons.add),
+//          ),
+          Card(
+              child: Column(
+                children: <Widget>[
+                  Text("card children1"),
+                  Text("card children2")
+                ],
+              ),
+          ),
+          SizedBox(
+            width: 180,
+            height: 60,
+            child: Card(
+              child: Column(
+                children: <Widget>[
+
+                  Text("card children1"),
+                  Text("card children2")
+                ],
+              ),
+            )
+          )
         ],
       ),
     );

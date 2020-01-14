@@ -1,3 +1,4 @@
+
 import 'package:flutter/material.dart';
 
 void main() => runApp(new MyApp());
@@ -10,16 +11,18 @@ class MyApp extends StatelessWidget {
       theme: new ThemeData(
         primarySwatch: Colors.green,
       ),
-      home: new MyHomePage(title: 'Flutter Demo Home Page'),
+      home: new MyHomePage(1, 'Flutter Demo Home Page'),
     );
   }
 }
 
 class MyHomePage extends StatefulWidget {
-  MyHomePage({Key key, this.title}) : super(key: key);
+//  MyHomePage({Key key, this.title}) : super(key: key);
 
   final String title;
   int a = 10;
+
+  MyHomePage(this.a, this.title) : super(key: Key('key'));
 
   @override
   _MyHomePageState createState() => new _MyHomePageState();

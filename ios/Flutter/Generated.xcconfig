@@ -1,7 +1,7 @@
 // This is a generated file; do not edit or check into version control.
 FLUTTER_ROOT=/Users/keke/flutter
-FLUTTER_APPLICATION_PATH=/Users/keke/AndroidStudioProjects/fluttertest
-FLUTTER_TARGET=/Users/keke/AndroidStudioProjects/fluttertest/lib/dart_test.dart
+FLUTTER_APPLICATION_PATH=/Users/keke/Documents/GitHub/FlutterLearn
+FLUTTER_TARGET=/Users/keke/Documents/GitHub/FlutterLearn/lib/main.dart
 FLUTTER_BUILD_DIR=build
 SYMROOT=${SOURCE_ROOT}/../build/ios
 FLUTTER_FRAMEWORK_DIR=/Users/keke/flutter/bin/cache/artifacts/engine/ios

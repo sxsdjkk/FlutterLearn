@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fluttertest/weather_page.dart';
 
 void main() => runApp(MyApp());
 
@@ -57,6 +58,13 @@ class _MyHomePageState extends State<MyHomePage> {
     });
   }
 
+  void _gotoWeatherPage() {
+    Navigator.push(
+        context,
+        new MaterialPageRoute(builder: (context) => new WeatherPage()),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     // This method is rerun every time setState is called, for instance as done
@@ -69,9 +77,11 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         // Here we take the value from the MyHomePage object that was created by
         // the App.build method, and use it to set our appbar title.
-        title: Text(widget.title+"---clicked "+'$_counter'),
-        backgroundColor: Colors.red,
+        title: Text(widget.title+"： clicked "+'$_counter'),
+        backgroundColor: Colors.orange,
       ),
+//      appBar:
+
       body: Center(
         // Center is a layout widget. It takes a single child and positions it
         // in the middle of the parent.
@@ -103,7 +113,7 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
+        onPressed: _gotoWeatherPage,
         tooltip: 'Increment',
         child: Icon(Icons.add),
       ), // This trailing comma makes auto-formatting nicer for build methods.
